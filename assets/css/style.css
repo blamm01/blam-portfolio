@@ -214,7 +214,7 @@ main #contact .overview .logo img {
 }
 
 main #contact .overview .text {
-    left: 300px;
+    left: 150px;
     position: relative;
     width: 50%;
     justify-content: right;
