@@ -1,294 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
-    --btn_background: orange;
-    --btn_text_color: white;
-    --btn_hover_text: black;
-    --btn_hover_background: rgb(95, 255, 2);
+  --background-color: #36393f;
+  --background-profile: #292b2f;
+  --profile-banner: #a1a1b8;
+  --discriminator-color: #B9BBBE;
+  --title-color: #FFFFFF;
+  --border-account-color: rgba(79, 84, 92, 0.48)
 }
 
-* {
-    padding: 0;
-    margin: 0;
+ul, li {
+  list-style: none;
 }
 
-html {
-    height: 100%;
-    width: 100%;
+html, body {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('../imgs/background.jpg');
+  background-repeat: no-repeat !important;
+  background-size: cover;
 }
 
-main {
-    height: 100%;
-    width: 100%;
+.user_container {
+  background-color: var(--background-profile);
+  width: 600px;
+  height: 500px;
+  border-radius: 8px;
+  position: absolute;
 }
 
-body {
-    font-family: monospace;
-    width: 100%;
-    height: 100%;
+.user_avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  top: 52px;
+  left: 16px;
+  padding: 8px;
+  background-color: var(--background-profile);
 }
 
-a {
-    text-decoration: none;
-    color: black
+.banner {
+  width: 600px;
+  height: 120px;
+  background-color: var(--profile-banner);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-li {
-    list-style: none;
+.imgInfo {
+  margin-bottom: 60px;
 }
 
-header {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    z-index: 1
+.info, .content {
+  padding-inline: 20px;
 }
 
-header .thumb {
-    justify-content: right;
+.info {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-header .thumb .icon {
-    max-width: 100px;
-    border-radius: 50%;
-    border-color: aqua;
-    padding: 10px 40px;
+.info .user_tag {
+  color: var(--discriminator-color);
 }
 
-header .list_item {
-    justify-content: right;
-    display: flex;
-    padding: 10px 100px;
+.content .title {
+  color: var(--title-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 12px 0;
 }
 
-header .list_item .item {
-    font-size: 20px;
-    padding: 15px 20px;
+.account {
+  border-radius: 8px;
+  border-color: var(--border-account-color);
+  border-style: solid;
+  border-width: 1px;
+  width: 264px;
+  padding: 12px 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-header .list_item .item a {
-    transition: all 0.2s ease-in-out;
+.account .openNewTab {
+  position: absolute;
+  right: 20px;
+  color: white
 }
 
-header .list_item .item a:hover {
-    color: orange;
-}
-
-main #overview {
-    background-color: rgb(20, 159, 223);
-    position: relative;
-    /* padding-top: 30vh; */
-    height: 100%;
-    /* padding-left: 250px; */
-    font-size: 35px;
-    font-family: 'Kanit', monospace;
-}
-
-main #overview #text {
-    position: absolute;
-    padding-left: 250px;
-    padding-top: 30vh;
-}
-
-main #overview .title {
-    font-size: 40px;
-}
-
-main #overview .description {
-    font-size: 20px;
-}
-
-main #overview .buttons {
-    display: flex;
-}
-
-main #overview .buttons .overview_btn {
-    padding: 10px 20px;
-    margin-right: 10px;
-    border-radius: 15px;
-    border-style: solid;
-    border-width: 1px;
-    cursor: pointer;
-    color: var(--btn_text_color);
-    background-color: var(--btn_background);
-    transition: all 0.2s ease-in-out;
-}
-
-main #overview .buttons .overview_btn:hover {
-    background-color: var(--btn_hover_background)
-}
-
-main #overview .buttons .overview_btn a {
-    color: var(--btn_text_color);
-}
-
-main #about {
-    text-align: center;
-    /* padding: 10px; */
-    padding-bottom: 30px;
-    background-color: red;
-}
-
-main #about .title {
-    font-size: 30px;
-    padding: 10px;
-}
-
-main #about .description {
-    font-size: 18px;
-    padding: 5px;
-    font-weight: bold;
-}
-
-main #about .overview {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-}
-
-main #about .overview .logo {
-    justify-content: left;
-    padding: 0 200px;
-}
-
-main #about .overview .logo img {
-    max-width: 300px;
-    border-radius: 100px;
-}
-
-main #about .overview .text {
-    right: 150px;
-    position: relative;
-    width: 50%;
-    justify-content: right;
-}
-
-main #about .overview .text h1 {
-    text-align: justify;
-    left: 100px;
-    position: relative
-}
-
-main #about .overview .text p {
-    font-family: 'Indie Flower', cursive;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: justify;
-}
-
-main #contact {
-    text-align: center;
-    /* padding: 10px; */
-    padding-bottom: 30px;
-    background-color: #F8FF00;
-}
-
-main #contact .title {
-    font-size: 30px;
-    padding: 10px;
-}
-
-main #contact .description {
-    font-size: 18px;
-    padding: 5px;
-    font-weight: bold;
-}
-
-main #contact .overview {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-}
-
-main #contact .overview .logo {
-    justify-content: left;
-    padding: 0 200px;
-}
-
-main #contact .overview .logo img {
-    max-width: 300px;
-    border-radius: 100px;
-}
-
-main #contact .overview .text {
-    left: 150px;
-    position: relative;
-    width: 50%;
-    justify-content: right;
-}
-
-main #contact .overview .text h1 {
-    text-align: justify;
-    left: 100px;
-    position: relative
-}
-
-main #contact .overview .text p {
-    font-family: 'Indie Flower', cursive;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: justify;
-    cursor: pointer;
-}
-
-main #contact .overview .text p:hover {
-    color: red;
-}
-
-main #skills {
-    text-align: center;
-    /* padding: 10px; */
-    padding-bottom: 30px;
-    background-color: #FF00E4;
-}
-
-main #skills .title {
-    font-size: 30px;
-    padding: 10px;
-}
-
-main #skills .description {
-    font-size: 18px;
-    padding: 5px;
-    font-weight: bold;
-}
-
-main #skills .overview {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-}
-
-main #skills .overview .text {
-    /* left: 300px; */
-    position: relative;
-    width: 50%;
-    /* justify-content: right; */
-}
-
-main #skills .overview .text h1 {
-    text-align: justify;
-    left: 100px;
-    position: relative
-}
-
-main #skills .overview .text p {
-    font-family: 'Indie Flower', cursive;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: justify;
-}
-
-footer {
-    background-color: rgb(30, 255, 0);
-    padding: 10px;
-}
-
-footer h4 {
-    color: black;
-    font-size: 24px;
-    text-align: center;
+.account .icon {
+  width: 24px;
+  height: 24px;
 }

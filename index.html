@@ -1,156 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bao Lam</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://kit.fontawesome.com/dd4ab22b06.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảo Lâm</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700&display=swap"
+    />
+    <script
+      src="https://kit.fontawesome.com/dd4ab22b06.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="shortcut icon" href="./assets/imgs/avatar.jpg" type="image/x-icon">
-</head>
-
-<body>
-
-    <main>
-
-        <header>
-            <div class="thumb">
-                <img class="icon" src="./assets/imgs/avatar.jpg" alt="">
-            </div>
-
-            <div class="list_item">
-                <div class="item">
-                    <p><a href="#">Home</a></p>
-                </div>
-                <div class="item">
-                    <p><a href="#about">About</a></p>
-                </div>
-                <div class="item">
-                    <p><a href="#skills">Skills</a></p>
-                </div>
-                <div class="item">
-                    <p><a href="#contact">Contact</a></p>
-                </div>
-            </div>
-        </header>
-
-        <div id="overview">
-            <div id="text">
-                <div class="title">
-                    <p class="text">Bao Lam</p>
-                </div>
-                <div class="description">
-                    <p class="text">A random kid in the world...</p>
-                </div>
-
-                <div class="buttons">
-                    <div class="item">
-                        <button class="overview_btn">
-                            <p><a href="#about">About me</a></p>
-                        </button>
-                    </div>
-                    <div class="item">
-                        <button class="overview_btn">
-                            <p><a href="#contact">Contact</a></p>
-                        </button>
-                    </div>
-                </div>
-            </div>
+  </head>
+  <body>
+    <div class="user_container">
+      <div class="banner"></div>
+      <div class="imgInfo">
+        <img src="./assets/imgs/avatar.jpg" alt="avatar" class="user_avatar" />
+      </div>
+      <div class="info">
+        <span class="username">lâm</span>
+        <span class="user_tag">#8965</span>
+      </div>
+      <div class="content">
+        <div class="about_me">
+          <p class="title">About Me</p>
+          <p class="description">
+            Hi, I'm Lâm, a Vietnamese student. I like coding websites and
+            Discord bots sometimes. I'm a developer on the backend of a website,
+            and NestJS is my main framework. I'm learning deeper into JavaScript
+            and TypeScript.
+          </p>
         </div>
-
-        <div id="about">
-            <div class="definition">
-                <h2 class="title">About Me!</h2>
-                <p class="description">Basic information of this website's creator</p>
-            </div>
-
-            <div class="overview">
-                <div class="logo">
-                    <img src="./assets/imgs/avatar.jpg" alt="avatar" class="avatar">
-                </div>
-
-                <div class="text">
-                    <h1>👋 Hello</h1>
-                    <p>There are some basic information about me:</p>
-                    <ul>
-                        <li>
-                            <p><i class="fa-solid fa-id-badge"></i> Bao Lam</p>
-                        </li>
-                        <li>
-                            <p><i class="fa-solid fa-code"></i> Student, Web Developer</p>
-                        </li>
-                        <li>
-                            <p><i class="fa-solid fa-font-awesome"></i> Vietnam</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="socials">
+          <p class="title">Socials</p>
+          <ul class="connected_accounts">
+            <li class="account">
+              <div class="icon">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <span class="name">LamHanoi10</span>
+              <a
+                href="https://github.com/LamHanoi10"
+                class="openNewTab"
+                target="_blank"
+              >
+                <i class="fa-solid fa-up-right-from-square"></i>
+              </a>
+            </li>
+          </ul>
         </div>
-
-        <div id="skills">
-            <div class="definition">
-                <h2 class="title">Skills</h2>
-                <p class="description">My skills in each coding language</p>
-            </div>
-
-            <div class="overview">
-
-                <div class="text">
-                    <ul>
-                        <li>
-                            <p><i class="fa-brands fa-html5"></i> HTML: 40/100%</p>
-                        </li>
-                        <li>
-                            <p><i class="fa-brands fa-css3"></i> CSS: 30/100%</p>
-                        </li>
-                        <li>
-                            <p><i class="fa-brands fa-js"></i> JS: 50/100%</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div id="contact">
-            <div class="definition">
-                <h2 class="title">Contact</h2>
-                <p class="description">Ways to make a connection with me</p>
-            </div>
-
-            <div class="overview">
-
-                <div class="text">
-                    <h1>🔗 Social Medias</h1>
-                    <ul>
-                        <li>
-                            <p onclick="window.open('https://discord.com/users/736636650796351559')"><i
-                                    class="fa-brands fa-discord"></i> Discord:
-                                https://discord.com/users/736636650796351559</p>
-                        </li>
-                        <li>
-                            <p onclick="window.open('https://github.com/LamHanoi10')"><i
-                                    class="fa-brands fa-github"></i> Github: https://github.com/LamHanoi10</p>
-                        </li>
-                        <li>
-                            <p onclick="window.open('https://www.reddit.com/user/LamHanoi10')"><i
-                                    class="fa-brands fa-reddit"></i> Reddit: https://reddit.com/user/LamHanoi10</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="logo">
-                    <img src="./assets/imgs/avatar.jpg" alt="avatar" class="avatar">
-                </div>
-
-            </div>
-        </div>
-
-        <footer>
-            <h4>This website is not responsived yet!</h4>
-        </footer>
-    </main>
-</body>
-
+      </div>
+    </div>
+  </body>
 </html>
