@@ -1,0 +1,140 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Social from "../components/Social.astro";
+---
+
+<Layout title="Nguyễn Hà Bảo Lâm">
+  <main>
+    <div class="container">
+      <div class="same">
+        <div class="header">
+          <img src="/favicon.ico" alt="" class="avatar" />
+          <h3 class="name">Nguyễn Hà Bảo Lâm</h3>
+          <p>Backend Developer / Student</p>
+        </div>
+
+        <div class="main">
+          <p class="about_me">
+            Hi there! I'm Lâm, a 13-year-old Vietnamese student.
+          </p>
+          <p class="about_me">
+            I'm learning at Luong The Vinh Middle & High School
+          </p>
+          <p class="about_me">
+            In my free time, I usually work in the backend of a website (which
+            is interesting)
+          </p>
+        </div>
+      </div>
+
+      <ul class="footer same">
+        <Social name="discord" />
+        <Social name="facebook" />
+        <Social name="x" />
+        <Social name="email" />
+        <Social name="github" />
+      </ul>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  ul,
+  li {
+    list-style: none;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  h3 {
+    color: white;
+  }
+
+  p {
+    color: rgb(212, 237, 250);
+  }
+
+  body {
+    background-image: url(/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family: sans-serif;
+    font-family: "Comfortaa", cursive;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 5px solid rgb(178, 202, 212);
+  }
+
+  .container {
+    border-radius: 3rem;
+    width: 500px;
+    height: 475px;
+    background-color: #434652;
+    position: relative;
+  }
+
+  .container .same {
+    padding: 30px;
+  }
+
+  .footer {
+    display: flex;
+    background-color: #3d404d;
+    bottom: 0;
+    /* position: absolute; */
+    width: 100%;
+    height: 116px;
+    border-end-end-radius: 3rem;
+    border-end-start-radius: 3rem;
+    align-items: center;
+  }
+
+  .header h3 {
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .header p {
+    opacity: 0.7;
+    margin-bottom: 10px;
+  }
+
+  .main p {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 500px) {
+    .container {
+      height: 100%;
+      width: 100%;
+    }
+
+    .container,
+    .footer {
+      border-radius: 0;
+    }
+
+    .footer {
+      position: relative;
+    }
+  }
+</style>

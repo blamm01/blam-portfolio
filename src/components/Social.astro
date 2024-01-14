@@ -1,0 +1,31 @@
+---
+import Svg from "@jasikpark/astro-svg-loader";
+import { Links } from "../consts";
+
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<li class="social">
+  <a class={`social ${name}`} href={(Links as any)[name]} target="_blank">
+    <Svg src={import(`../assets/svg/${name}.svg?raw`)} aria-label={name} />
+  </a>
+</li>
+
+<style>
+  .social svg {
+    height: 30px;
+    width: 30px;
+    color: white;
+    margin-right: 20px;
+    transition: 0.4s;
+  }
+
+  .social svg:hover {
+    color: rgb(178, 202, 212);
+    scale: 1.25;
+  }
+</style>
